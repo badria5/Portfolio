@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>  Badria-Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-    <nav>
+      <nav id="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="nav-links">
         <a href="#bio">Bio</a>
         <a href="#skills">Skills</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#testimonials">Testimonials</a>
+        </div>
     </nav>
     <img src="flower.jpg" alt=" Picture" class="portfolio-picture">
     <p>I am a computer science engineer with a great passion for website development</p>
@@ -24,28 +30,33 @@
             <li>CSS</li>
             <li>JavaScript</li>
             <li>Python</li>
-            
-        </ul>
-    </section>
-
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <p>Here are some of my recent projects:</p>
+      </ul>
+      </section>
+<section id="certificates">
+        <h2>Certificates</h2>
         <ul>
-            <li><a href="https://github.com/badria5/Digital-Card">myproject 1</a></li>
-            <li><a href="https://github.com/badria5/Digital-Card2">myProject 2</a></li>
-            
+            <li>Bachelor of Computer Science from Taiz University</li>
+            <li>International Computer Driving License</li>
+            <li>Computer maintenance</li>
         </ul>
     </section>
-</main>
-
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <blockquote>"A strong teacher with high experience in the field of teaching and lecturing"</blockquote>
+        
+    </section>
+    <button onclick="downloadResume()">Download Resume</button>
 <footer>
-    <p>Contact me at: <a href="mailto:badoraalshamiry@gmail.com" >badoraalshamiry@gmail.com</a></p>
+    <p id="contact">Contact me at: <a href="mailto:badoraalshamiry@gmail.com" >badoraalshamiry@gmail.com</a></p>
     <p>Follow me on social media: 
-         | 
         <a href="https://github.com/badria5" >GitHub</a>
     </p>
 </footer>
-
+<script>
+    function toggleMenu() {
+        const navbar = document.getElementById('navbar');
+        navbar.classList.toggle('active');
+    }
+</script>
 </body>
 </html>
